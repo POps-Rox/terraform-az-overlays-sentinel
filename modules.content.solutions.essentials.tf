@@ -50,7 +50,7 @@ module "mod_attacker_tools_tp_essentials" {
   version = "~> 1.0"
   count   = var.enable_sentinel && var.enable_solution_attacker_tools_threat_protection_essentials ? 1 : 0
 
-  name                = "deploy_attacker_tools_threat_protection_essentials_content_solution"
+  name                = "deploy_att_tools_threat_protection_essentials_content_solution"
   resource_group_name = local.workspace_resource_group_name
   deployment_mode     = var.deployment_mode
   deploy_environment  = var.deploy_environment
@@ -71,7 +71,7 @@ module "mod_cloud_identity_tp_essentials" {
   version = "~> 1.0"
   count   = var.enable_sentinel && var.enable_solution_cloud_identity_threat_protection_essentials ? 1 : 0
 
-  name                = "deploy_cloud_identity_threat_protection_essentials_content_solution"
+  name                = "deploy_cloud_id_threat_protection_essentials_content_solution"
   resource_group_name = local.workspace_resource_group_name
   deployment_mode     = var.deployment_mode
   deploy_environment  = var.deploy_environment
@@ -92,7 +92,7 @@ module "mod_cloud_service_tp_essentials" {
   version = "~> 1.0"
   count   = var.enable_sentinel && var.enable_solution_cloud_service_threat_protection_essentials ? 1 : 0
 
-  name                = "deploy_cloud_service_threat_protection_essentials_content_solution"
+  name                = "deploy_cloud_svc_threat_protection_essentials_content_solution"
   resource_group_name = local.workspace_resource_group_name
   deployment_mode     = var.deployment_mode
   deploy_environment  = var.deploy_environment
