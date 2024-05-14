@@ -3,9 +3,9 @@
 
 resource "azurerm_sentinel_automation_rule" "automation_rule" {
   depends_on = [ azurerm_sentinel_log_analytics_workspace_onboarding.sentinel ]
-  for_each                   = var.automation_rules != null ? var.automation_rules : tomap({})
+  for_each                   = var.enable_sentinel && var.automation_rules != null ? var.automation_rules : tomap({})
   display_name               = try(each.value.display_name, null)
-  log_analytics_workspace_id = azurerm_sentinel_log_analytics_workspace_onboarding.sentinel.workspace_id
+  log_analytics_workspace_id = local.workspace_id
 
   name           = try(each.value.name, null)
   order          = try(lookup(each.value.order, "order"), 1)
