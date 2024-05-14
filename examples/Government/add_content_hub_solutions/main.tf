@@ -2,8 +2,8 @@
 # Licensed under the MIT License.
 
 module "mod_sentinel_content_hub_solutions" {
-  #source = "azurenoops/overlays-sentinel/azurerm"  
-  #version = "x.x.x"  
+  #source = "azurenoops/overlays-sentinel/azurerm"
+  #version = "x.x.x"
   source     = "../../.."
   depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_log_analytics_solution.solutions]
 
@@ -12,9 +12,9 @@ module "mod_sentinel_content_hub_solutions" {
   deploy_environment         = "dev"
 
   # Only Required for Conent Hub Solutions
-  log_analytics_workspace_name     = azurerm_log_analytics_workspace.sentinel_workspace.name
-  log_analytics_workspace_location = azurerm_resource_group.sentinel_rg.location
-  resource_group_name              = azurerm_resource_group.sentinel_rg.name
+  enable_sentinel_onboarding                  = false
+  log_analytics_workspace_name                = azurerm_log_analytics_workspace.sentinel_workspace.name
+  log_analytics_workspace_resource_group_name = azurerm_log_analytics_workspace.sentinel_workspace.resource_group_name
 
   # Content Hub Solutions
   enable_solution_azure_activity = true
