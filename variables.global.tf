@@ -1,13 +1,25 @@
 
 variable "log_analytics_workspace_id" {
   description = "The ID of the Log Analytics Workspace to onboard to Azure Sentinel"
-  type        = string  
+  type        = string
+}
+
+variable "log_analytics_workspace_name" {
+  description = "The Name of the Log Analytics Workspace to onboard to Azure Sentinel. This variable is required if enable_sentinel_onboarding is set to false."
+  type        = string
+  default     = null
 }
 
 variable "log_analytics_workspace_location" {
   description = "The name of the Resource Group in which the Log Analytics Workspace is located. This is only used in Hub Content Solutions."
   type        = string
-  default = null 
+  default     = null
+}
+
+variable "log_analytics_workspace_resource_group_name" {
+  description = "The name of the Resource Group in which the Log Analytics Workspace is located. This is only used in Hub Content Solutions. This variable is required if enable_sentinel_onboarding is set to false."
+  type        = string
+  default     = null
 }
 
 variable "deploy_environment" {
@@ -31,4 +43,16 @@ variable "existing_principal_id" {
   description = "The ID of the principal to use for the deployment. If not specified, a new principal will be created."
   type        = string
   default     = null
+}
+
+variable "enable_sentinel" {
+  type        = bool
+  default     = true
+  description = "Set to false to prevent the module from creating any sentinel resources."
+}
+
+variable "enable_sentinel_onboarding" {
+  type        = bool
+  default     = true
+  description = "Set to false to prevent the module from onboarding the Log Analytics Workspace to Azure Sentinel."
 }

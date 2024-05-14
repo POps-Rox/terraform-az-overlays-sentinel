@@ -2,9 +2,9 @@
 # Licensed under the MIT License.
 
 variable "data_connector_aad_enabled" {
-  description = "Whether the Azure Active Directory logs are retrieved."
+  description = "Whether the Azure Active Directory logs are retrieved. Default is true."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "data_connector_aad_logs" {
