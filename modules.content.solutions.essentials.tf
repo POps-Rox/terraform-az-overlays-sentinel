@@ -5,7 +5,6 @@
 module "mod_soar_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_soar_essentials ? 1 : 0
 
   name                = "deploy_soar_essentials_content_solution"
@@ -26,7 +25,6 @@ module "mod_soar_essentials" {
 module "mod_ueba_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_ueba_essentials ? 1 : 0
 
   name                = "deploy_ueba_essentials_content_solution"
@@ -47,7 +45,6 @@ module "mod_ueba_essentials" {
 module "mod_attacker_tools_tp_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_attacker_tools_threat_protection_essentials ? 1 : 0
 
   name                = "deploy_att_tools_threat_protection_essentials_content_solution"
@@ -68,7 +65,6 @@ module "mod_attacker_tools_tp_essentials" {
 module "mod_cloud_identity_tp_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_cloud_identity_threat_protection_essentials ? 1 : 0
 
   name                = "deploy_cloud_id_threat_protection_essentials_content_solution"
@@ -89,7 +85,6 @@ module "mod_cloud_identity_tp_essentials" {
 module "mod_cloud_service_tp_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_cloud_service_threat_protection_essentials ? 1 : 0
 
   name                = "deploy_cloud_svc_threat_protection_essentials_content_solution"
@@ -110,7 +105,6 @@ module "mod_cloud_service_tp_essentials" {
 module "mod_endpoint_tp_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_endpoint_threat_protection_essentials ? 1 : 0
 
   name                = "deploy_endpoint_threat_protection_essentials_content_solution"
@@ -131,7 +125,6 @@ module "mod_endpoint_tp_essentials" {
 module "mod_network_session_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_network_session_essentials ? 1 : 0
 
   name                = "deploy_network_session_essentials_content_solution"
@@ -152,7 +145,6 @@ module "mod_network_session_essentials" {
 module "mod_network_tp_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_network_threat_protection_essentials ? 1 : 0
 
   name                = "deploy_network_threat_protection_essentials_content_solution"
@@ -173,7 +165,6 @@ module "mod_network_tp_essentials" {
 module "mod_security_threat_essentials" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
-  version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_security_threat_essentials ? 1 : 0
 
   name                = "deploy_security_threat_essentials_content_solution"
