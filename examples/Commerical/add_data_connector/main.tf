@@ -1,7 +1,7 @@
 
 
 module "mod_sentinel_connector" {
-  #source = "azurenoops/overlays-sentinel/azurerm"  
+  #source = "github.com/POps-Rox/tf-az-overlays-sentinel"  
   #version = "x.x.x"  
   source     = "../../.."
   depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_log_analytics_solution.solutions]

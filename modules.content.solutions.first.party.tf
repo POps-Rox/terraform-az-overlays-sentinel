@@ -4,7 +4,7 @@
 # Enable Microsoft XDR Solution in Sentinel
 module "mod_microsoft_xdr_id" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_microsoft_xdr ? 1 : 0
 
@@ -25,7 +25,7 @@ module "mod_microsoft_xdr_id" {
 # Enable Microsoft Entra ID Solution in Sentinel
 module "mod_microsoft_entra_id" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_azure_ad ? 1 : 0
 
@@ -46,7 +46,7 @@ module "mod_microsoft_entra_id" {
 # Enable Azure Active Directory Solution in Sentinel
 module "mod_azure_activity" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_azure_activity ? 1 : 0
 
@@ -67,7 +67,7 @@ module "mod_azure_activity" {
 # Enable Microsoft 365 Solution in Sentinel
 module "mod_microsoft_365" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_microsoft_365 ? 1 : 0
 
@@ -88,7 +88,7 @@ module "mod_microsoft_365" {
 # Enable Microsoft Teams Solution in Sentinel
 module "mod_teams" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_microsoft_teams ? 1 : 0
 
@@ -109,7 +109,7 @@ module "mod_teams" {
 # Enable Microsoft Defender For Cloud Solution in Sentinel
 module "mod_microsoft_defender_for_cloud" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_microsoft_defender_for_cloud ? 1 : 0
 
@@ -130,7 +130,7 @@ module "mod_microsoft_defender_for_cloud" {
 # Enable Microsoft Defender For Endpoint Solution in Sentinel
 module "mod_microsoft_defender_for_endpoint" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_microsoft_defender_for_endpoint ? 1 : 0
 
@@ -151,7 +151,7 @@ module "mod_microsoft_defender_for_endpoint" {
 # Enable Microsoft Defender For IOT Solution in Sentinel
 module "mod_microsoft_defender_for_iot" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_microsoft_defender_for_iot ? 1 : 0
 
@@ -172,7 +172,7 @@ module "mod_microsoft_defender_for_iot" {
 # Enable Microsoft Dynamics Solution in Sentinel
 module "mod_microsoft_dynamics_365" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_microsoft_dynamics_365 ? 1 : 0
 
@@ -193,7 +193,7 @@ module "mod_microsoft_dynamics_365" {
 # Enable Office Insider Risk Management Solution in Sentinel
 module "mod_office_insider_risk_management" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_office_insider_risk_management ? 1 : 0
 
@@ -214,7 +214,7 @@ module "mod_office_insider_risk_management" {
 # Enable Office 365 Project Solution in Sentinel
 module "mod_office_365_project" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_office_365_project ? 1 : 0
 
@@ -235,7 +235,7 @@ module "mod_office_365_project" {
 # Enable Office 365 Power BI Solution in Sentinel
 module "mod_office_365_powerbi" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_office_365_powerbi ? 1 : 0
 
@@ -256,7 +256,7 @@ module "mod_office_365_powerbi" {
 # Enable Threat Intelligence Solution in Sentinel
 module "mod_threat_intelligence" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_threat_intelligence ? 1 : 0
 
@@ -277,7 +277,7 @@ module "mod_threat_intelligence" {
 # Enable SOC Handbook Solution in Sentinel
 module "mod_soc_handbook" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_soc_handbook ? 1 : 0
 
@@ -298,7 +298,7 @@ module "mod_soc_handbook" {
 # Enable SOC Handbook Solution in Sentinel
 module "mod_soc_process_fx" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   version    = "~> 1.0"
   count      = var.enable_sentinel && var.enable_solution_soc_process_fx ? 1 : 0
 
