@@ -4,7 +4,7 @@
 variable "enable_solution_microsoft_xdr" {
   description = "Enable Microsoft XDR Solution in Sentinel. Default is false."
   type        = bool
-  default     = true  
+  default     = true
 }
 
 variable "enable_solution_azure_ad" {
@@ -88,5 +88,5 @@ variable "enable_solution_soc_handbook" {
 variable "enable_solution_soc_process_fx" {
   description = "Enable SOC Process FX Solution in Sentinel. Default is false."
   type        = bool
-  default     = false  
+  default     = false
 }

@@ -3,8 +3,8 @@
 
 # Enable Azure Active Directory Diagnostic Settings in Sentinel
 resource "azurerm_monitor_aad_diagnostic_setting" "aad_logs" {
-  depends_on = [ azurerm_sentinel_log_analytics_workspace_onboarding.sentinel ]
-  count = var.enable_sentinel && var.data_connector_aad_enabled ? 1 : 0
+  depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
+  count      = var.enable_sentinel && var.data_connector_aad_enabled ? 1 : 0
 
   name                       = "Export-Logs-To-Sentinel"
   log_analytics_workspace_id = local.workspace_id

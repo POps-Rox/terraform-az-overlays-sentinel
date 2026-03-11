@@ -6,7 +6,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 resource "azurerm_sentinel_alert_rule_scheduled" "rule" {
-  depends_on = [ azurerm_sentinel_log_analytics_workspace_onboarding.sentinel ]
+  depends_on                 = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
   for_each                   = var.enable_sentinel && var.scheduled_alert_rules != null ? var.scheduled_alert_rules : tomap({})
   display_name               = try(each.value.display_name, null)
   log_analytics_workspace_id = local.workspace_id

@@ -10,5 +10,5 @@ variable "data_connector_aad_logs" {
 variable "retention_policy_days" {
   description = "Number of days to retain the logs. Default is 1 day."
   type        = number
-  default     = 1  
+  default     = 1
 }

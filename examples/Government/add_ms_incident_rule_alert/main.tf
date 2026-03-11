@@ -7,7 +7,7 @@ module "mod_sentinel_ms_security_incident_alert_rule" {
   source     = "../../.."
   depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_storage_account.sentinel_storage_account, azurerm_log_analytics_solution.solutions]
 
- # Required Inputs
+  # Required Inputs
   log_analytics_workspace_id = azurerm_log_analytics_workspace.sentinel_workspace.id
   deploy_environment         = "dev"
 

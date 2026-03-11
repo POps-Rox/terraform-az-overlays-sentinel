@@ -4,14 +4,14 @@
 variable "automation_rules" {
   description = "Map of automation rules."
   type = map(object({
-    display_name               = string    
-    name                       = string
-    order                      = number
-    condition_json             = optional(string)
-    enabled                    = optional(bool, false)
-    expiration                 = optional(string)
-    triggers_on                = optional(string)
-    triggers_when              = optional(string)
+    display_name   = string
+    name           = string
+    order          = number
+    condition_json = optional(string)
+    enabled        = optional(bool, false)
+    expiration     = optional(string)
+    triggers_on    = optional(string)
+    triggers_when  = optional(string)
     action_incident = optional(list(object({
       order                  = number
       status                 = optional(string)

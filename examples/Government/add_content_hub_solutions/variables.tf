@@ -4,7 +4,7 @@
 variable "name" {
   description = "The name to assign to the alert rule."
   type        = string
-  default = "fusion_alert_rule"
+  default     = "fusion_alert_rule"
 }
 
 variable "enable_rule_alert" {

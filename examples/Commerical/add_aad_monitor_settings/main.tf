@@ -11,5 +11,5 @@ module "mod_sentinel_aad_monitor_settings" {
   deploy_environment         = "dev"
 
   data_connector_aad_enabled = true
-  data_connector_aad_logs    = var.data_connector_aad_logs  
+  data_connector_aad_logs    = var.data_connector_aad_logs
 }

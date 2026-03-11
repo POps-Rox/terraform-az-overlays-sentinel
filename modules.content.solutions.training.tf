@@ -4,10 +4,10 @@
 
 # Enable Sentinel KQL Training Solution
 module "mod_kql_training" {
-  depends_on = [ azurerm_sentinel_log_analytics_workspace_onboarding.sentinel ]
-  source  = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
-  version = "~> 1.0"
-  count   = var.enable_sentinel && var.enable_solution_kql_training ? 1 : 0
+  depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
+  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  version    = "~> 1.0"
+  count      = var.enable_sentinel && var.enable_solution_kql_training ? 1 : 0
 
   name                = "deploy_kql_training_content_solution"
   resource_group_name = local.workspace_resource_group_name
@@ -25,10 +25,10 @@ module "mod_kql_training" {
 
 # Enable Sentinel Training Lab Solution
 module "mod_training_lab" {
-  depends_on = [ azurerm_sentinel_log_analytics_workspace_onboarding.sentinel ]
-  source  = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
-  version = "~> 1.0"
-  count   = var.enable_sentinel && var.enable_solution_training_lab ? 1 : 0
+  depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
+  source     = "azurenoops/overlays-arm-deployment/azurerm//modules/azure_arm_deployment/resource_group"
+  version    = "~> 1.0"
+  count      = var.enable_sentinel && var.enable_solution_training_lab ? 1 : 0
 
   name                = "deploy_training_lab_content_solution"
   resource_group_name = local.workspace_resource_group_name

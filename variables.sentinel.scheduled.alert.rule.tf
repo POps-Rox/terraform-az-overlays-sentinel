@@ -4,7 +4,7 @@
 variable "scheduled_alert_rules" {
   description = "Map of scheduled alert rules."
   type = map(object({
-    display_name                = string   
+    display_name                = string
     name                        = string
     query                       = string
     severity                    = string

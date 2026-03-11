@@ -10,7 +10,7 @@ variable "tenant_id" {
 variable "subscription_id" {
   description = "The ID of the subscription that this Azure Security Center Data Connector connects to."
   type        = string
-  default     = null  
+  default     = null
 }
 
 variable "enable_alerts" {
@@ -28,5 +28,5 @@ variable "enable_discovery_logs" {
 variable "data_connectors" {
   description = "(Optional) The list of data connectors to enable for the Azure Security Center Data Connector. Defaults to ['AzureActiveDirectory']."
   type        = list(string)
-  default     = ["AzureActiveDirectory"] 
+  default     = ["AzureActiveDirectory"]
 }
