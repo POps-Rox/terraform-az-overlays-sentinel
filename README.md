@@ -41,7 +41,7 @@ The following example will create a Microsoft Security Incident Alert Rule which
 
 ```hcl  
 module "mod_sentinel" {  
-  source = "azurenoops/overlays-sentinel/azurerm"  
+  source = "POps-Rox/tf-az-overlays-sentinel/azurerm"  
   version = "~> x.x.x"  
   
   # Log Analytics Workspace
@@ -70,7 +70,7 @@ The following example will create a Fusion Alert Rule which uses an alert rule t
 
 ```hcl  
 module "mod_sentinel" {  
-  source = "azurenoops/overlays-sentinel/azurerm"  
+  source = "POps-Rox/tf-az-overlays-sentinel/azurerm"  
   version = "~> x.x.x"  
   
   # Log Analytics Workspace
@@ -94,7 +94,7 @@ The following example will create a scheduled alert rule which will run every 5 
 ```hcl
 
 module "mod_sentinel" {
-  source = "azurenoops/overlays-sentinel/azurerm"
+  source = "POps-Rox/tf-az-overlays-sentinel/azurerm"
   version = "~> x.x.x"
 
   # Log Analytics Workspace
@@ -156,7 +156,7 @@ The following example will create an automation rule which will trigger an incid
 ```hcl
 # Enable SOAR Essentials for Send Email and Create Incident
 module "mod_sentinel" {
-  source = "azurenoops/overlays-sentinel/azurerm"  
+  source = "POps-Rox/tf-az-overlays-sentinel/azurerm"  
   version = "x.x.x"  
   
   # Required Inputs
@@ -235,7 +235,7 @@ To view the full list of permissions needed and related cost to enable each Data
 
 ```hcl  
 module "mod_sentinel" {  
-  source = "azurenoops/overlays-sentinel-rules/azurerm"  
+  source = "POps-Rox/tf-az-overlays-sentinel-rules/azurerm"  
   version = "x.x.x"  
 
   log_analytics_workspace_id = azurerm_log_analytics_workspace.sentinel_workspace.id
@@ -276,7 +276,7 @@ Defualt Logs included in the Diagnostic Settings are:
 
 ```hcl  
 module "mod_sentinel" {
-  #source = "azurenoops/overlays-sentinel/azurerm"  
+  #source = "POps-Rox/tf-az-overlays-sentinel/azurerm"  
   #version = "x.x.x"  
   
   log_analytics_workspace_id = azurerm_log_analytics_workspace.sentinel_workspace.id
@@ -333,7 +333,7 @@ Training Solutions:
 
 ```hcl  
 module "mod_sentinel" {
-  source = "azurenoops/overlays-sentinel/azurerm//modules/content_hub_solutions"  
+  source = "POps-Rox/tf-az-overlays-sentinel/azurerm//modules/content_hub_solutions"  
   version = "x.x.x"  
   
   # Required Inputs
@@ -358,7 +358,7 @@ The UBEA Solutions can be enabled by using the `enable_ueba` variable.
 
 ```hcl
 module "mod_sentinel" {
-  source = "azurenoops/overlays-sentinel/azurerm//modules/ubea"  
+  source = "POps-Rox/tf-az-overlays-sentinel/azurerm//modules/ubea"  
   version = "x.x.x"  
   
  # Log Analytics Workspace
