@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 
 module "mod_sentinel_fusion_alert_rule" {
-  #source = "github.com/POps-Rox/tf-az-overlays-sentinel"
+  #source = "github.com/POps-Rox/terraform-az-overlays-sentinel"
   #version = "x.x.x"
   source     = "../../.."
   depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_storage_account.sentinel_storage_account, azurerm_log_analytics_solution.solutions]

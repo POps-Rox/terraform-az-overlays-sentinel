@@ -3,7 +3,7 @@
 
 # Enable SOAR Essentials for Send Email and Create Incident
 module "mod_sentinel_content_hub_solutions" {
-  #source = "github.com/POps-Rox/tf-az-overlays-sentinel"  
+  #source = "github.com/POps-Rox/terraform-az-overlays-sentinel"  
   #version = "x.x.x"  
   source     = "../../.."
   depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_log_analytics_solution.solutions]
@@ -22,7 +22,7 @@ module "mod_sentinel_content_hub_solutions" {
 }
 
 module "mod_sentinel_automation_rule" {
-  #source = "github.com/POps-Rox/tf-az-overlays-sentinel"  
+  #source = "github.com/POps-Rox/terraform-az-overlays-sentinel"  
   #version = "x.x.x"  
   source     = "../../.."
   depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_storage_account.sentinel_storage_account, azurerm_log_analytics_solution.solutions]

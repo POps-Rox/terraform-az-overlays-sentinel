@@ -5,7 +5,7 @@
 # Enable Sentinel KQL Training Solution
 module "mod_kql_training" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/terraform-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   count      = var.enable_sentinel && var.enable_solution_kql_training ? 1 : 0
 
   name                = "deploy_kql_training_content_solution"
@@ -25,7 +25,7 @@ module "mod_kql_training" {
 # Enable Sentinel Training Lab Solution
 module "mod_training_lab" {
   depends_on = [azurerm_sentinel_log_analytics_workspace_onboarding.sentinel]
-  source     = "github.com/POps-Rox/tf-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
+  source     = "github.com/POps-Rox/terraform-az-overlays-armdeployment//modules/azure_arm_deployment/resource_group"
   count      = var.enable_sentinel && var.enable_solution_training_lab ? 1 : 0
 
   name                = "deploy_training_lab_content_solution"
