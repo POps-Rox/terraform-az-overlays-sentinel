@@ -64,21 +64,21 @@ resource "azurerm_sentinel_alert_rule_scheduled" "rule" {
     }
   }
 
-  dynamic "incident_configuration" {
+  dynamic "incident" {
     for_each = try(lookup(each.value.incident_configuration, "incident_configuration"), [])
     content {
-      create_incident = try(incident_configuration.value["create_incident"])
+      create_incident_enabled = try(incident.value["create_incident"])
 
       dynamic "grouping" {
-        for_each = try(incident_configuration.value["grouping"])
+        for_each = try(incident.value["grouping"])
         content {
           enabled                 = grouping.value["enabled"]
           lookback_duration       = grouping.value["lookback_duration"]
           reopen_closed_incidents = grouping.value["reopen_closed_incidents"]
           entity_matching_method  = grouping.value["entity_matching_method"]
-          group_by_entities       = grouping.value["group_by_entities"]
-          group_by_alert_details  = grouping.value["group_by_alert_details"]
-          group_by_custom_details = grouping.value["group_by_custom_details"]
+          by_entities             = grouping.value["group_by_entities"]
+          by_alert_details        = grouping.value["group_by_alert_details"]
+          by_custom_details       = grouping.value["group_by_custom_details"]
         }
       }
     }
