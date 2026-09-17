@@ -13,9 +13,9 @@ module "mod_sentinel_content_hub_solutions" {
   deploy_environment         = "dev"
 
   # Only Required for Conent Hub Solutions
-  log_analytics_workspace_name     = azurerm_log_analytics_workspace.sentinel_workspace.name
-  log_analytics_workspace_location = azurerm_resource_group.sentinel_rg.location
-  resource_group_name              = azurerm_resource_group.sentinel_rg.name
+  log_analytics_workspace_name                = azurerm_log_analytics_workspace.sentinel_workspace.name
+  log_analytics_workspace_location            = azurerm_resource_group.sentinel_rg.location
+  log_analytics_workspace_resource_group_name = azurerm_resource_group.sentinel_rg.name
 
   # Content Hub Solutions
   enable_solution_soar_essentials = true
@@ -25,7 +25,7 @@ module "mod_sentinel_automation_rule" {
   #source = "github.com/POps-Rox/terraform-az-overlays-sentinel"  
   #version = "x.x.x"  
   source     = "../../.."
-  depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_storage_account.sentinel_storage_account, azurerm_log_analytics_solution.solutions]
+  depends_on = [azurerm_log_analytics_workspace.sentinel_workspace, azurerm_log_analytics_solution.solutions]
 
   # Log Analytics Workspace
   log_analytics_workspace_id = azurerm_log_analytics_workspace.sentinel_workspace.id

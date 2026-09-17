@@ -25,3 +25,18 @@ output "dtc_ms_cloud_app_security_id" {
   value       = try(azurerm_sentinel_data_connector_microsoft_cloud_app_security.data_connector_microsoft_cloud_app_security[0].id, null)
   description = "The ID of the Microsoft Cloud App Security Data Connector."
 }
+
+output "scheduled_alert_rule_ids" {
+  value       = { for key, rule in azurerm_sentinel_alert_rule_scheduled.rule : key => rule.id }
+  description = "The IDs of the Sentinel scheduled alert rules."
+}
+
+output "machine_learning_behavior_analytics_alert_rule_ids" {
+  value       = { for key, rule in azurerm_sentinel_alert_rule_machine_learning_behavior_analytics.sentinel_alert_rule_machine_learning_behavior_analytics : key => rule.id }
+  description = "The IDs of the Sentinel machine learning behavior analytics alert rules."
+}
+
+output "ms_security_incident_alert_rule_ids" {
+  value       = { for key, rule in azurerm_sentinel_alert_rule_ms_security_incident.sentinel_alert_rule_ms_security_incident : key => rule.id }
+  description = "The IDs of the Sentinel Microsoft security incident alert rules."
+}
