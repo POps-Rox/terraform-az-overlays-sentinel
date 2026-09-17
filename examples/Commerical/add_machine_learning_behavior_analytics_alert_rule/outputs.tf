@@ -3,5 +3,5 @@
 
 output "id" {
   description = "The ID of the alert rule."
-  value       = module.mod_sentinel_machine_learning_behavior_analytics_alert_rule.id
+  value       = module.mod_sentinel_machine_learning_behavior_analytics_alert_rule.machine_learning_behavior_analytics_alert_rule_ids
 }

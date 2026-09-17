@@ -3,5 +3,5 @@
 
 output "id" {
   description = "The ID of the alert rule."
-  value       = module.mod_sentinel_ms_security_incident_alert_rule.id
+  value       = module.mod_sentinel_ms_security_incident_alert_rule.ms_security_incident_alert_rule_ids
 }
